@@ -43,6 +43,7 @@ export const User = styled.div`
     border: 2px solid #38B1FF;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 `;
 
 export const NavActive = styled.div`
@@ -55,11 +56,17 @@ export const NavActive = styled.div`
     -webkit-box-shadow: 0px 0px 8px 1px rgba(56,177,255,0.67); 
     box-shadow: 0px 0px 8px 1px rgba(56,177,255,0.67);
 `;
+export const MainContainer = styled.div`
+    display: flex;
+    width: 100%;
+    height: 100%;
+`;
 
 export const Sidenav = styled.div`
     display: flex;
     height: 100%;
-    max-width: 100px;
+    max-width: 130px;
+    width: 100%;
     align-items: center;
     flex-direction: column;
     justify-content: center;
@@ -67,14 +74,70 @@ export const Sidenav = styled.div`
 
 export const Sidemenu = styled.div`
     display: flex;
-    min-width: 65px;
-    height: 200px;
+    min-width: 80px;
+    height: 260px;
     margin-top: 90%;
     border-radius: 100px;
     background-color: white;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: center
+    align-items: center;
+`;
+
+export const Container = styled.div`
+    width: 100%;
+    height: 100%;
+`;
+
+export const Stories = styled.div`
+    width: 70%;
+    height: 240px;
+    padding: 20px;
+`;
+
+export const StoriesTitle = styled.h4`
+    font-family: 'Roboto';
+    font-weight: bold;
+    color: #8092A8;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+`;
+
+export const StoriesContainer = styled.div`
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-top: 100px;
+    align-items: center;
+    justify-content: space-between;
+`;
+
+export const StorieCard = styled.div`
+    display: flex;
+    width: 230px;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 320px;
+    border-radius: 20px;
+    background-color: red;
+    background-image: url(${props => props.image});
+    background-position: center;
+    background-size: 100%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    cursor: pointer;
+
+    &:hover{
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
 `;
 
 
+export const StoreUser = styled.img`
+    width: 80px;
+    height: 80px;
+    margin-top: -40px;
+    border-radius: 100px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+`;
