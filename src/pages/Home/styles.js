@@ -5,6 +5,7 @@ export const Body = styled.div`
     width: 100vw;
     height: 100vh;
     background-color: #F0EBEF;
+    flex-direction: column;
 `;
 
 export const Nav = styled.div`
@@ -53,6 +54,27 @@ export const NavActive = styled.div`
     position: absolute;
     -webkit-box-shadow: 0px 0px 8px 1px rgba(56,177,255,0.67); 
     box-shadow: 0px 0px 8px 1px rgba(56,177,255,0.67);
+`;
+
+export const Sidenav = styled.div`
+    display: flex;
+    height: 100%;
+    max-width: 100px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+`;
+
+export const Sidemenu = styled.div`
+    display: flex;
+    min-width: 65px;
+    height: 200px;
+    margin-top: 90%;
+    border-radius: 100px;
+    background-color: white;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center
 `;
 
 
