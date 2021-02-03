@@ -74,9 +74,9 @@ export const Sidenav = styled.div`
 
 export const Sidemenu = styled.div`
     display: flex;
-    min-width: 80px;
-    height: 260px;
-    margin-top: 90%;
+    min-width: 70px;
+    height: 230px;
+    margin-top: 80%;
     border-radius: 100px;
     background-color: white;
     flex-direction: column;
@@ -85,12 +85,12 @@ export const Sidemenu = styled.div`
 `;
 
 export const Container = styled.div`
-    width: 100%;
+    width: 65%;
     height: 100%;
 `;
 
 export const Stories = styled.div`
-    width: 70%;
+    width: 100%;
     height: 240px;
     padding: 20px;
 `;
@@ -99,7 +99,7 @@ export const StoriesTitle = styled.h4`
     font-family: 'Roboto';
     font-weight: bold;
     color: #8092A8;
-    font-size: 20px;
+    font-size: 16px;
     letter-spacing: 1.5px;
 `;
 
@@ -107,18 +107,18 @@ export const StoriesContainer = styled.div`
     display: flex;
     width: 100%;
     height: 100%;
-    margin-top: 100px;
+    margin-top: 50px;
     align-items: center;
     justify-content: space-between;
 `;
 
 export const StorieCard = styled.div`
     display: flex;
-    width: 230px;
+    width: 180px;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    height: 320px;
+    height: 240px;
     border-radius: 20px;
     background-color: red;
     background-image: url(${props => props.image});
@@ -133,11 +133,10 @@ export const StorieCard = styled.div`
     }
 `;
 
-
 export const StoreUser = styled.img`
-    width: 80px;
-    height: 80px;
-    margin-top: -40px;
+    width: 60px;
+    height: 60px;
+    margin-top: -30px;
     border-radius: 100px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 `;

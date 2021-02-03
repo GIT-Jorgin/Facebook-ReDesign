@@ -72,11 +72,11 @@ export default function Home(){
             </Nav>
             <MainContainer>
                 <Sidenav>
-                    <img style={{marginTop: '-60%', cursor: 'pointer'}} width={50} alt="settings icon" src={add} />
+                    <img style={{marginTop: '-30%', cursor: 'pointer'}} width={45} alt="settings icon" src={add} />
                     <Sidemenu>
-                        <img style={{cursor: 'pointer'}} width={40} alt="email icon" src={email} />
-                        <img style={{cursor: 'pointer'}} width={40} alt="search icon" src={search} />
-                        <img style={{cursor: 'pointer'}} width={40} alt="notification icon" src={notification} />
+                        <img style={{cursor: 'pointer'}} width={35} alt="email icon" src={email} />
+                        <img style={{cursor: 'pointer'}} width={35} alt="search icon" src={search} />
+                        <img style={{cursor: 'pointer'}} width={35} alt="notification icon" src={notification} />
                     </Sidemenu>
                 </Sidenav>
                 <Container>
