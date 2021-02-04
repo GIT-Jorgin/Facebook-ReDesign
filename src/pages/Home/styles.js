@@ -2,9 +2,9 @@ import styled from 'styled-components';
 
 export const Body = styled.div`
     display: flex;
-    width: 100vw;
-    height: 100vh;
-    background-color: #F0EBEF;
+    width: 100%;
+    height: 100%;
+    background-color: #F2F7FD;
     flex-direction: column;
 `;
 
@@ -60,9 +60,21 @@ export const MainContainer = styled.div`
     display: flex;
     width: 100%;
     height: 100%;
+    justify-content: space-between;
 `;
 
 export const Sidenav = styled.div`
+    position: fixed;
+    display: flex;
+    height: 100%;
+    max-width: 130px;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+`;
+
+export const GhostNav = styled.div`
     display: flex;
     height: 100%;
     max-width: 130px;
@@ -85,17 +97,17 @@ export const Sidemenu = styled.div`
 `;
 
 export const Container = styled.div`
-    width: 65%;
+    width: 60%;
     height: 100%;
 `;
 
 export const Stories = styled.div`
     width: 100%;
     height: 240px;
-    padding: 20px;
 `;
 
 export const StoriesTitle = styled.h4`
+    margin-top: 30px;
     font-family: 'Roboto';
     font-weight: bold;
     color: #8092A8;
@@ -120,7 +132,7 @@ export const StorieCard = styled.div`
     flex-direction: column;
     height: 240px;
     border-radius: 20px;
-    background-color: red;
+    background-color: cyan;
     background-image: url(${props => props.image});
     background-position: center;
     background-size: 100%;
@@ -139,4 +151,81 @@ export const StoreUser = styled.img`
     margin-top: -30px;
     border-radius: 100px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+`;
+
+export const ChatsContainer = styled.div`
+    width: 22%;
+    height: 100%;
+`;
+
+export const ChatsTitle = styled.h4`
+    margin-top: 30px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    color: #8092A8;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+`;
+
+export const ChatsContent = styled.div`
+    display: flex;
+    background-color: #E3EFFD;
+    align-items: center;
+    flex-direction: column;
+    border-top-left-radius: 50px;
+    margin-top: 30px;
+    width: 100%;
+    height: 100%;
+`;
+
+export const ChatsCard = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    border-radius: 20px;
+    width: 85%;
+    height: 130px;
+    background-color: #FFF;
+    box-shadow: 0px 0px 0px rgba(209,209,207,0.2), 0 0px 10px rgba(193,193,191,0.3);
+`;
+
+export const ChatsCardContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 85%;
+`;
+export const CardHeader = styled.div`
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    align-items: center;
+    width: 100%;
+    height: 46px;
+`;
+
+export const CardHeaderUser = styled.img`
+    width: 20%;
+    height: 46px;
+    background-color: cyan;
+    border-radius: 10px;
+`;
+
+export const CardHeaderUserInfo = styled.div`
+    display: flex;
+    font-family: 'Roboto';
+    flex-direction: column;
+    width: 55%;
+    height: 46px;
+    justify-content: space-between;
+`;
+
+export const CardContent = styled.div`
+    display: flex;
+    width: 100%;
+    height: 58px;
+    align-items: center;
 `;

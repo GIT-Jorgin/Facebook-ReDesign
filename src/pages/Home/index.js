@@ -14,7 +14,17 @@ import {
     StoriesTitle,
     StoriesContainer,
     StorieCard,
-    StoreUser
+    StoreUser,
+    ChatsContainer,
+    ChatsTitle,
+    ChatsContent,
+    ChatsCard,
+    GhostNav,
+    ChatsCardContainer,
+    CardHeader,
+    CardHeaderUser,
+    CardHeaderUserInfo,
+    CardContent,
 } from './styles';
 import home from '../../images/icons/home_icon.png';
 import play from '../../images/icons/play_icon.png';
@@ -25,18 +35,22 @@ import email from '../../images/icons/email_icon.png';
 import search from '../../images/icons/search_icon.png';
 import notification from '../../images/icons/notification_icon.png';
 import emoji from '../../images/icons/emoji_icon.png';
-import add from '../../images/icons/add_icon.png'
-import facebook_logo from '../../images/icons/facebook_logo.png'
-import settings from '../../images/icons/settings_icon.png'
+import add from '../../images/icons/add_icon.png';
+import facebook_logo from '../../images/icons/facebook_logo.png';
+import settings from '../../images/icons/settings_icon.png';
 import profilePicture from '../../images/profilePicture.png';
-import stories1 from '../../images/stories/stories1.png'
-import stories2 from '../../images/stories/stories2.png'
-import stories3 from '../../images/stories/stories3.png'
-import stories4 from '../../images/stories/stories4.png'
-import user1 from '../../images/stories/users/user1.png'
-import user2 from '../../images/stories/users/user2.png'
-import user3 from '../../images/stories/users/user3.png'
-import user4 from '../../images/stories/users/user4.png'
+import stories1 from '../../images/stories/stories1.png';
+import stories2 from '../../images/stories/stories2.png';
+import stories3 from '../../images/stories/stories3.png';
+import stories4 from '../../images/stories/stories4.png';
+import user1 from '../../images/stories/users/user1.png';
+import user2 from '../../images/stories/users/user2.png';
+import user3 from '../../images/stories/users/user3.png';
+import user4 from '../../images/stories/users/user4.png';
+import messenger from '../../images/icons/messenger_icon.png';
+import user5 from '../../images/msg/user1.png'
+import user6 from '../../images/msg/user2.png'
+import user7 from '../../images/msg/user3.png'
 
 
 export default function Home(){
@@ -71,8 +85,9 @@ export default function Home(){
                 <img alt="settings icon" style={{width: 30, height: 30, cursor: 'pointer'}} src={settings} />
             </Nav>
             <MainContainer>
+                <GhostNav></GhostNav>
                 <Sidenav>
-                    <img style={{marginTop: '-30%', cursor: 'pointer'}} width={45} alt="settings icon" src={add} />
+                    <img style={{marginTop: '-60%', cursor: 'pointer'}} width={45} alt="settings icon" src={add} />
                     <Sidemenu>
                         <img style={{cursor: 'pointer'}} width={35} alt="email icon" src={email} />
                         <img style={{cursor: 'pointer'}} width={35} alt="search icon" src={search} />
@@ -102,6 +117,56 @@ export default function Home(){
                         </StoriesContainer>
                     </Stories>
                 </Container>
+                <ChatsContainer>
+                    <ChatsTitle>ULTIMAS CONVERSAS</ChatsTitle>
+                    <ChatsContent>
+                        <ChatsCard>
+                            <ChatsCardContainer>
+                                <CardHeader>
+                                    <CardHeaderUser src={user5} />
+                                    <CardHeaderUserInfo>
+                                        <h5 style={{marginTop: 5, fontSize: 14, color: '#8092A8'}}>Thais Fernandes</h5>
+                                        <span style={{marginTop: -20, fontSize: 12, marginBottom: 5, color: '#8092A8'}}>Há 12 min atrás</span>
+                                    </CardHeaderUserInfo>
+                                    <img width="35" height="35" src={messenger} />
+                                </CardHeader>
+                                <CardContent>
+                                    <p style={{color: '#8092A8', fontSize: 12}}>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
+                                </CardContent>
+                            </ChatsCardContainer>
+                        </ChatsCard>
+                        <ChatsCard>
+                            <ChatsCardContainer>
+                                <CardHeader>
+                                        <CardHeaderUser src={user6} />
+                                        <CardHeaderUserInfo>
+                                            <h5 style={{marginTop: 5, fontSize: 14, color: '#8092A8'}}>Rafael Sousa</h5>
+                                            <span style={{marginTop: -20, fontSize: 12, marginBottom: 5, color: '#8092A8'}}>Há 33 min atrás</span>
+                                        </CardHeaderUserInfo>
+                                        <img width="35" height="35" src={messenger} />
+                                </CardHeader>
+                                <CardContent>
+                                    <p style={{color: '#8092A8', fontSize: 12}}>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
+                                </CardContent>
+                             </ChatsCardContainer>
+                        </ChatsCard>
+                        <ChatsCard>
+                            <ChatsCardContainer>
+                                <CardHeader>
+                                    <CardHeaderUser src={user7} />
+                                    <CardHeaderUserInfo>
+                                        <h5 style={{marginTop: 5, fontSize: 14, color: '#8092A8'}}>Amanda Bastos</h5>
+                                        <span style={{marginTop: -20, fontSize: 12, marginBottom: 5, color: '#8092A8'}}>Há 52 min atrás</span>
+                                    </CardHeaderUserInfo>
+                                    <img width="35" height="35" src={messenger} />
+                                </CardHeader>
+                                <CardContent>
+                                    <p style={{color: '#8092A8', fontSize: 12}}>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
+                                </CardContent>
+                            </ChatsCardContainer>
+                        </ChatsCard>
+                    </ChatsContent>
+                </ChatsContainer>
             </MainContainer>
         </Body>
     )
