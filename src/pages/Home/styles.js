@@ -97,7 +97,7 @@ export const Sidemenu = styled.div`
 `;
 
 export const Container = styled.div`
-    width: 60%;
+    width: 64%;
     height: 100%;
 `;
 
@@ -228,4 +228,98 @@ export const CardContent = styled.div`
     width: 100%;
     height: 58px;
     align-items: center;
+`;
+
+export const CardChart = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    border-radius: 20px;
+    width: 85%;
+    height: 200px;
+    background-color: #FFF;
+    box-shadow: 0px 0px 0px rgba(209,209,207,0.2), 0 0px 10px rgba(193,193,191,0.3);
+`;
+
+export const Feed = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin-top: 100px;
+`;
+
+export const Post = styled.div`
+    display: flex;
+    width: 65%;
+    height: 230px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    background-color: #FFF;
+    box-shadow: 0px 0px 0px rgba(209,209,207,0.2), 0 0px 10px rgba(193,193,191,0.3);
+`;
+
+export const PostIcons = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 55%;
+    height: 50px;
+`;
+
+export const PostInput = styled.textarea`
+    color: #899BB0;
+    font-family: 'Arial';
+    font-size: 16px;
+    width: 83%;
+    height: 25%;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid #DAE4F0;
+    resize: none;
+
+    &:focus{
+        outline: none;
+    }
+
+    &::placeholder{
+        font-family: 'Arial';
+        color: #B2C1D3;
+    }
+`;
+
+export const PostSubmit = styled.button`
+    font-family: 'Roboto';
+    font-size: 16px;
+    letter-spacing: 1px;
+    width: 89%;
+    height: 40px;
+    margin-top: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #5FA8FF;
+    border: 1px solid #5FA8FF;
+    background-color: #F4F9FE;
+    border-radius: 5px;
+    margin-bottom: 15px;
+
+    &:focus{
+        outline: none;
+    };
+
+    &:hover{
+        background-color: #E7F3FF
+    }
+`;
+
+export const PostsTitle = styled.h4`
+    margin-top: 30px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    color: #8092A8;
+    font-size: 16px;
+    letter-spacing: 1.5px;
 `;

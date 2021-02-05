@@ -25,6 +25,13 @@ import {
     CardHeaderUser,
     CardHeaderUserInfo,
     CardContent,
+    CardChart,
+    Feed,
+    Post,
+    PostInput,
+    PostSubmit,
+    PostsTitle,
+    PostIcons
 } from './styles';
 import home from '../../images/icons/home_icon.png';
 import play from '../../images/icons/play_icon.png';
@@ -48,12 +55,66 @@ import user2 from '../../images/stories/users/user2.png';
 import user3 from '../../images/stories/users/user3.png';
 import user4 from '../../images/stories/users/user4.png';
 import messenger from '../../images/icons/messenger_icon.png';
-import user5 from '../../images/msg/user1.png'
-import user6 from '../../images/msg/user2.png'
-import user7 from '../../images/msg/user3.png'
+import user5 from '../../images/msg/user1.png';
+import user6 from '../../images/msg/user2.png';
+import user7 from '../../images/msg/user3.png';
+import robot from '../../images/icons/robot_icon.png';
+import ReactApexChart from 'react-apexcharts';
+import gallery from '../../images/icons/gallery.png';
+import claquete from '../../images/icons/claquete.png';
+import list1 from '../../images/icons/post_list__icon.png';
+import musicalNote from '../../images/icons/musicalNote.png';
+import map from '../../images/icons/map.png';
+import list2 from '../../images/icons/list.png';
+import folder from '../../images/icons/folder.png'
 
 
 export default function Home(){
+    const [ chartData ] = [{
+        series: [{
+            name: "dado",
+            data: [10, 41, 20, 51, 12, 42, 20]
+        }],
+        options: {
+          chart: {
+            height: 130,
+            type: 'line',
+            zoom: {
+              enabled: false
+            },
+            toolbar: {
+                show: false
+            },
+          },
+          dataLabels: {
+            enabled: false
+          },
+          stroke: {
+            curve: 'straight',
+            lineCap: 'but',
+            width: 2,
+            dashArray: 5
+          },
+          grid: {
+            row: {
+              colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+              opacity: 0.3
+            },
+          },
+          xaxis: {
+            labels: {
+                show: false
+            },
+            categories: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'jul'],
+          },
+          yaxis: {
+              show: false
+          }
+        },
+      
+      
+      }]
+
     return(
         <Body>
             <Nav>
@@ -116,6 +177,22 @@ export default function Home(){
                             </StorieCard>
                         </StoriesContainer>
                     </Stories>
+                    <Feed>
+                        <PostsTitle>NOVO POST</PostsTitle>
+                        <Post>
+                            <PostIcons>
+                                <img style={{cursor: 'pointer'}} alt="gallery" width="25" src={gallery} />
+                                <img style={{cursor: 'pointer'}} alt="claquete" width="25" src={claquete} />
+                                <img style={{cursor: 'pointer'}} alt="list" width="25" src={list1} />
+                                <img style={{cursor: 'pointer'}} alt="Musical note" width="25" src={musicalNote} />
+                                <img style={{cursor: 'pointer'}} alt="map" width="25" src={map} />
+                                <img style={{cursor: 'pointer'}} alt="list 2" width="25" src={list2} />
+                                <img style={{cursor: 'pointer'}} alt="folder" width="25" src={folder} />
+                            </PostIcons>
+                            <PostInput placeholder="Sua mensagem" />
+                            <PostSubmit>PUBLICAR</PostSubmit>
+                        </Post>
+                    </Feed>
                 </Container>
                 <ChatsContainer>
                     <ChatsTitle>ULTIMAS CONVERSAS</ChatsTitle>
@@ -128,7 +205,7 @@ export default function Home(){
                                         <h5 style={{marginTop: 5, fontSize: 14, color: '#8092A8'}}>Thais Fernandes</h5>
                                         <span style={{marginTop: -20, fontSize: 12, marginBottom: 5, color: '#8092A8'}}>Há 12 min atrás</span>
                                     </CardHeaderUserInfo>
-                                    <img width="35" height="35" src={messenger} />
+                                    <img alt="messenger" width="35" height="35" src={messenger} />
                                 </CardHeader>
                                 <CardContent>
                                     <p style={{color: '#8092A8', fontSize: 12}}>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
@@ -143,7 +220,7 @@ export default function Home(){
                                             <h5 style={{marginTop: 5, fontSize: 14, color: '#8092A8'}}>Rafael Sousa</h5>
                                             <span style={{marginTop: -20, fontSize: 12, marginBottom: 5, color: '#8092A8'}}>Há 33 min atrás</span>
                                         </CardHeaderUserInfo>
-                                        <img width="35" height="35" src={messenger} />
+                                        <img alt="messenger"  width="35" height="35" src={messenger} />
                                 </CardHeader>
                                 <CardContent>
                                     <p style={{color: '#8092A8', fontSize: 12}}>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
@@ -158,13 +235,27 @@ export default function Home(){
                                         <h5 style={{marginTop: 5, fontSize: 14, color: '#8092A8'}}>Amanda Bastos</h5>
                                         <span style={{marginTop: -20, fontSize: 12, marginBottom: 5, color: '#8092A8'}}>Há 52 min atrás</span>
                                     </CardHeaderUserInfo>
-                                    <img width="35" height="35" src={messenger} />
+                                    <img alt="messenger"  width="35" height="35" src={messenger} />
                                 </CardHeader>
                                 <CardContent>
                                     <p style={{color: '#8092A8', fontSize: 12}}>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
                                 </CardContent>
                             </ChatsCardContainer>
                         </ChatsCard>
+                        <CardChart>
+                            <ChatsCardContainer>
+                                <CardHeader style={{marginTop: -15, justifyContent: 'flex-start'}}>
+                                    <CardHeaderUser style={{marginLeft: 5}} src={robot} />
+                                    <CardHeaderUserInfo style={{marginLeft: 10}}>
+                                        <h5 style={{marginTop: 5, fontSize: 14, color: '#8092A8'}}>Robô assistente</h5>
+                                        <span style={{marginTop: -20, fontSize: 12, marginBottom: 5, color: '#8092A8'}}>Há 3 dias atrás</span>
+                                    </CardHeaderUserInfo>
+                                </CardHeader>
+                                <CardContent style={{marginTop: 45}}>
+                                    <ReactApexChart options={chartData.options} series={chartData.series} type="line" height={130} />
+                                </CardContent>
+                            </ChatsCardContainer>
+                        </CardChart>
                     </ChatsContent>
                 </ChatsContainer>
             </MainContainer>
