@@ -311,7 +311,7 @@ export const PostSubmit = styled.button`
     };
 
     &:hover{
-        background-color: #E7F3FF
+        background-color: #DCEEFF;
     }
 `;
 
@@ -322,4 +322,73 @@ export const PostsTitle = styled.h4`
     color: #8092A8;
     font-size: 16px;
     letter-spacing: 1.5px;
+`;
+
+export const FeedPosts = styled.div`
+    display: flex;
+    width: 65%;
+    height: 500px;
+    margin-top: 25px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    background-color: #FFF;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 0px rgba(209,209,207,0.2), 0 0px 10px rgba(193,193,191,0.3);
+`;
+
+export const FeedPostsContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 92%;
+    height: 90%;
+`;
+
+export const FeedPostHeader = styled.div`
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 55px;
+`;
+
+export const FeedPostPic = styled.img`
+    width: 55px;
+    height: 55px;
+    border-radius: 15px;
+    cursor: pointer;
+`;
+
+export const FeedPostUser = styled.div`
+    width: 76%;
+    height: 100%;
+`;
+
+export const FeedPostOptions = styled.img`
+    display: flex;
+    font-family: 'Roboto';
+    flex-direction: column;
+    width: 35px;
+    height: 35px;
+    border-radius: 12px;
+    justify-content: space-between;
+    cursor: pointer;
+`;
+
+export const FeedpostContent = styled.div`
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+`;
+
+export const FeedPostAcions = styled.div`
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+    height: 40px;
 `;

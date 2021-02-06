@@ -31,7 +31,15 @@ import {
     PostInput,
     PostSubmit,
     PostsTitle,
-    PostIcons
+    PostIcons,
+    FeedPosts,
+    FeedPostsContainer,
+    FeedPostHeader,
+    FeedPostPic,
+    FeedPostUser,
+    FeedPostOptions,
+    FeedpostContent,
+    FeedPostAcions
 } from './styles';
 import home from '../../images/icons/home_icon.png';
 import play from '../../images/icons/play_icon.png';
@@ -66,8 +74,13 @@ import list1 from '../../images/icons/post_list__icon.png';
 import musicalNote from '../../images/icons/musicalNote.png';
 import map from '../../images/icons/map.png';
 import list2 from '../../images/icons/list.png';
-import folder from '../../images/icons/folder.png'
-
+import folder from '../../images/icons/folder.png';
+import postPicture from '../../images/PostPicture.png';
+import post from '../../images/Post.png';
+import postOptions from '../../images/post_options.png';
+import like from '../../images/icons/like.png';
+import comment from '../../images/icons/comment.png';
+import share from '../../images/icons/share.png';
 
 export default function Home(){
     const [ chartData ] = [{
@@ -192,6 +205,27 @@ export default function Home(){
                             <PostInput placeholder="Sua mensagem" />
                             <PostSubmit>PUBLICAR</PostSubmit>
                         </Post>
+                        <FeedPosts>
+                            <FeedPostsContainer>
+                                <FeedPostHeader>
+                                    <FeedPostPic src={postPicture} />
+                                    <FeedPostUser>
+                                        <h5 style={{marginTop: 6, fontSize: 16, color: '#8092A8', marginBottom: '-2px'}}>Isabela Castro</h5>
+                                        <span style={{fontSize: 12, color: '#8092A8', marginBottom: 5}}>Há 3 min atrás</span>
+                                    </FeedPostUser>
+                                    <FeedPostOptions src={postOptions} />
+                                </FeedPostHeader>
+                                <FeedpostContent>
+                                <h5 style={{marginTop: 40, fontFamily: 'Roboto', fontSize: 15.5, color: '#8092A8', fontWeight: 400}}>Lorem Ipsum is simply dummy text of the printing and typesetting!</h5>
+                                <img alt="post" style={{width: '100%', height: '100%', borderRadius: '30px', marginTop: -10}} src={post} />
+                                </FeedpostContent>
+                                <FeedPostAcions>
+                                    <img width="20" style={{marginLeft: 10, cursor: 'pointer'}} src={like} />
+                                    <img style={{marginLeft: 20, cursor: 'pointer'}} width="20" src={comment} />
+                                    <img style={{marginLeft: 20, cursor: 'pointer'}} width="20" src={share} />
+                                </FeedPostAcions>
+                            </FeedPostsContainer>
+                        </FeedPosts>
                     </Feed>
                 </Container>
                 <ChatsContainer>
