@@ -242,17 +242,25 @@ export const CardChart = styled.div`
     box-shadow: 0px 0px 0px rgba(209,209,207,0.2), 0 0px 10px rgba(193,193,191,0.3);
 `;
 
+export const FeedContainer = styled.div`
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+`;
+
 export const Feed = styled.div`
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 65%;
     height: 100%;
     margin-top: 100px;
 `;
 
 export const Post = styled.div`
     display: flex;
-    width: 65%;
+    width: 95%;
     height: 230px;
     flex-direction: column;
     justify-content: center;
@@ -326,7 +334,7 @@ export const PostsTitle = styled.h4`
 
 export const FeedPosts = styled.div`
     display: flex;
-    width: 65%;
+    width: 95%;
     height: 500px;
     margin-top: 25px;
     flex-direction: column;
@@ -391,4 +399,65 @@ export const FeedPostAcions = styled.div`
     margin-top: 20px;
     width: 100%;
     height: 40px;
+`;
+
+export const Friends = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    height: 100%;
+    margin-top: 110px;
+`;
+
+export const Friendstitle = styled.h4`
+    font-family: 'Roboto';
+    font-weight: bold;
+    color: #8092A8;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+`;
+
+export const FriendsCard = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+    background-color: #FFF;
+    border-radius: 20px;
+    box-shadow: 0px 0px 0px rgba(209,209,207,0.2), 0 0px 10px rgba(193,193,191,0.3);
+`;
+
+export const FriendUserPic = styled.img`
+    width: 70px;
+    height: 70px;
+    border-radius: 20px;
+    background-color: cyan;
+`;
+
+export const FriendInfo = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 45%;
+    height: 100%;
+`;
+
+export const FriendOptions = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 58px;
+    height: 70px;
+    border-radius: 20px;
+    margin-right: 12px;
+`;
+
+export const OnlineFriends = styled.div`
+    display: flex;
+    width: 100%;
+    margin-top: -30%;
+    height: 100%;
+    align-items: center;
+    flex-direction: row;
 `;

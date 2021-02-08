@@ -39,7 +39,15 @@ import {
     FeedPostUser,
     FeedPostOptions,
     FeedpostContent,
-    FeedPostAcions
+    FeedPostAcions,
+    FeedContainer,
+    Friends,
+    FriendsCard,
+    FriendUserPic,
+    FriendInfo,
+    FriendOptions,
+    OnlineFriends,
+    Friendstitle
 } from './styles';
 import home from '../../images/icons/home_icon.png';
 import play from '../../images/icons/play_icon.png';
@@ -81,91 +89,98 @@ import postOptions from '../../images/post_options.png';
 import like from '../../images/icons/like.png';
 import comment from '../../images/icons/comment.png';
 import share from '../../images/icons/share.png';
+import friend1 from '../../images/friends/user1.png';
+import friend2 from '../../images/friends/user2.png';
+import friend3 from '../../images/friends/user3.png';
+import friend4 from '../../images/friends/user4.png';
+import online from '../../images/icons/online.png';
+import friend from '../../images/icons/friend.png';
+import friendMail from '../../images/icons/friendMail.png';
 
-export default function Home(){
-    const [ chartData ] = [{
+export default function Home() {
+    const [chartData] = [{
         series: [{
             name: "dado",
             data: [10, 41, 20, 51, 12, 42, 20]
         }],
         options: {
-          chart: {
-            height: 130,
-            type: 'line',
-            zoom: {
-              enabled: false
+            chart: {
+                height: 130,
+                type: 'line',
+                zoom: {
+                    enabled: false
+                },
+                toolbar: {
+                    show: false
+                },
             },
-            toolbar: {
+            dataLabels: {
+                enabled: false
+            },
+            stroke: {
+                curve: 'straight',
+                lineCap: 'but',
+                width: 2,
+                dashArray: 5
+            },
+            grid: {
+                row: {
+                    colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+                    opacity: 0.3
+                },
+            },
+            xaxis: {
+                labels: {
+                    show: false
+                },
+                categories: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'jul'],
+            },
+            yaxis: {
                 show: false
-            },
-          },
-          dataLabels: {
-            enabled: false
-          },
-          stroke: {
-            curve: 'straight',
-            lineCap: 'but',
-            width: 2,
-            dashArray: 5
-          },
-          grid: {
-            row: {
-              colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
-              opacity: 0.3
-            },
-          },
-          xaxis: {
-            labels: {
-                show: false
-            },
-            categories: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'jul'],
-          },
-          yaxis: {
-              show: false
-          }
+            }
         },
-      
-      
-      }]
 
-    return(
+
+    }]
+
+    return (
         <Body>
             <Nav>
-                <img alt="facebook logo" style={{width: 35, height: 35, cursor: 'pointer'}} src={facebook_logo} />
+                <img alt="facebook logo" style={{ width: 35, height: 35, cursor: 'pointer' }} src={facebook_logo} />
                 <NavContainer>
                     <Navlink>
-                        <img alt="home icon" style={{width: '25px'}} src={home} />
+                        <img alt="home icon" style={{ width: '25px' }} src={home} />
                         <NavActive></NavActive>
                     </Navlink>
                     <Navlink>
-                        <img alt="play icon" style={{width: '25px'}} src={play} />
+                        <img alt="play icon" style={{ width: '25px' }} src={play} />
                     </Navlink>
                     <Navlink>
-                        <img alt="menu icon" style={{width: '25px'}} src={menu} />
+                        <img alt="menu icon" style={{ width: '25px' }} src={menu} />
                     </Navlink>
                     <User>
-                        <img alt="profile" style={{width: 50, borderRadius: 10}} src={profilePicture} />
-                     </User>
+                        <img alt="profile" style={{ width: 50, borderRadius: 10 }} src={profilePicture} />
+                    </User>
                     <Navlink>
-                        <img alt="user icon" style={{width: '25px'}} src={user} />
+                        <img alt="user icon" style={{ width: '25px' }} src={user} />
                     </Navlink>
                     <Navlink>
-                        <img alt="trend icon" style={{width: '25px'}} src={ray} />
+                        <img alt="trend icon" style={{ width: '25px' }} src={ray} />
                     </Navlink>
                     <Navlink>
-                        <img alt="emoji icon" style={{width: '25px'}} src={emoji} />
+                        <img alt="emoji icon" style={{ width: '25px' }} src={emoji} />
                     </Navlink>
                 </NavContainer>
-                <img alt="settings icon" style={{width: 30, height: 30, cursor: 'pointer'}} src={settings} />
+                <img alt="settings icon" style={{ width: 30, height: 30, cursor: 'pointer' }} src={settings} />
             </Nav>
             <MainContainer>
                 <GhostNav></GhostNav>
                 <Sidenav>
-                    <img style={{marginTop: '-60%', cursor: 'pointer'}} width={45} alt="settings icon" src={add} />
+                    <img style={{ marginTop: '-60%', cursor: 'pointer' }} width={45} alt="settings icon" src={add} />
                     <Sidemenu>
-                        <img style={{cursor: 'pointer'}} width={35} alt="email icon" src={email} />
-                        <img style={{cursor: 'pointer'}} width={35} alt="search icon" src={search} />
-                        <img style={{cursor: 'pointer'}} width={35} alt="notification icon" src={notification} />
+                        <img style={{ cursor: 'pointer' }} width={35} alt="email icon" src={email} />
+                        <img style={{ cursor: 'pointer' }} width={35} alt="search icon" src={search} />
+                        <img style={{ cursor: 'pointer' }} width={35} alt="notification icon" src={notification} />
                     </Sidemenu>
                 </Sidenav>
                 <Container>
@@ -174,59 +189,120 @@ export default function Home(){
                         <StoriesContainer>
                             <StorieCard image={stories1}>
                                 <StoreUser src={user1} />
-                                <h3 style={{color: 'white', letterSpacing: '1.3px', textShadow: "0px 2px 4px #000000", fontWeight: '500'}}>JULIANA</h3>
+                                <h3 style={{ color: 'white', letterSpacing: '1.3px', textShadow: "0px 2px 4px #000000", fontWeight: '500' }}>JULIANA</h3>
                             </StorieCard>
                             <StorieCard image={stories2}>
                                 <StoreUser src={user2} />
-                                <h3 style={{color: 'white', letterSpacing: '1.3px', textShadow: "0px 2px 4px #000000", fontWeight: '500'}}>MAICON</h3>
+                                <h3 style={{ color: 'white', letterSpacing: '1.3px', textShadow: "0px 2px 4px #000000", fontWeight: '500' }}>MAICON</h3>
                             </StorieCard>
                             <StorieCard image={stories3}>
                                 <StoreUser src={user3} />
-                                <h3 style={{color: 'white', letterSpacing: '1.3px', textShadow: "0px 2px 4px #000000", fontWeight: '500'}}>ANDRÉ</h3>
+                                <h3 style={{ color: 'white', letterSpacing: '1.3px', textShadow: "0px 2px 4px #000000", fontWeight: '500' }}>ANDRÉ</h3>
                             </StorieCard>
                             <StorieCard image={stories4}>
                                 <StoreUser src={user4} />
-                                <h3 style={{color: 'white', letterSpacing: '1.3px', textShadow: "0px 2px 4px #000000", fontWeight: '500'}}>RENATA</h3>
+                                <h3 style={{ color: 'white', letterSpacing: '1.3px', textShadow: "0px 2px 4px #000000", fontWeight: '500' }}>RENATA</h3>
                             </StorieCard>
                         </StoriesContainer>
                     </Stories>
-                    <Feed>
-                        <PostsTitle>NOVO POST</PostsTitle>
-                        <Post>
-                            <PostIcons>
-                                <img style={{cursor: 'pointer'}} alt="gallery" width="25" src={gallery} />
-                                <img style={{cursor: 'pointer'}} alt="claquete" width="25" src={claquete} />
-                                <img style={{cursor: 'pointer'}} alt="list" width="25" src={list1} />
-                                <img style={{cursor: 'pointer'}} alt="Musical note" width="25" src={musicalNote} />
-                                <img style={{cursor: 'pointer'}} alt="map" width="25" src={map} />
-                                <img style={{cursor: 'pointer'}} alt="list 2" width="25" src={list2} />
-                                <img style={{cursor: 'pointer'}} alt="folder" width="25" src={folder} />
-                            </PostIcons>
-                            <PostInput placeholder="Sua mensagem" />
-                            <PostSubmit>PUBLICAR</PostSubmit>
-                        </Post>
-                        <FeedPosts>
-                            <FeedPostsContainer>
-                                <FeedPostHeader>
-                                    <FeedPostPic src={postPicture} />
-                                    <FeedPostUser>
-                                        <h5 style={{marginTop: 6, fontSize: 16, color: '#8092A8', marginBottom: '-2px'}}>Isabela Castro</h5>
-                                        <span style={{fontSize: 12, color: '#8092A8', marginBottom: 5}}>Há 3 min atrás</span>
-                                    </FeedPostUser>
-                                    <FeedPostOptions src={postOptions} />
-                                </FeedPostHeader>
-                                <FeedpostContent>
-                                <h5 style={{marginTop: 40, fontFamily: 'Roboto', fontSize: 15.5, color: '#8092A8', fontWeight: 400}}>Lorem Ipsum is simply dummy text of the printing and typesetting!</h5>
-                                <img alt="post" style={{width: '100%', height: '100%', borderRadius: '30px', marginTop: -10}} src={post} />
-                                </FeedpostContent>
-                                <FeedPostAcions>
-                                    <img width="20" style={{marginLeft: 10, cursor: 'pointer'}} src={like} />
-                                    <img style={{marginLeft: 20, cursor: 'pointer'}} width="20" src={comment} />
-                                    <img style={{marginLeft: 20, cursor: 'pointer'}} width="20" src={share} />
-                                </FeedPostAcions>
-                            </FeedPostsContainer>
-                        </FeedPosts>
-                    </Feed>
+                    <FeedContainer>
+                        <Feed>
+                            <PostsTitle>NOVO POST</PostsTitle>
+                            <Post>
+                                <PostIcons>
+                                    <img style={{ cursor: 'pointer' }} alt="gallery" width="25" src={gallery} />
+                                    <img style={{ cursor: 'pointer' }} alt="claquete" width="25" src={claquete} />
+                                    <img style={{ cursor: 'pointer' }} alt="list" width="25" src={list1} />
+                                    <img style={{ cursor: 'pointer' }} alt="Musical note" width="25" src={musicalNote} />
+                                    <img style={{ cursor: 'pointer' }} alt="map" width="25" src={map} />
+                                    <img style={{ cursor: 'pointer' }} alt="list 2" width="25" src={list2} />
+                                    <img style={{ cursor: 'pointer' }} alt="folder" width="25" src={folder} />
+                                </PostIcons>
+                                <PostInput placeholder="Sua mensagem" />
+                                <PostSubmit>PUBLICAR</PostSubmit>
+                            </Post>
+                            <FeedPosts>
+                                <FeedPostsContainer>
+                                    <FeedPostHeader>
+                                        <FeedPostPic src={postPicture} />
+                                        <FeedPostUser>
+                                            <h5 style={{ marginTop: 6, fontSize: 16, color: '#8092A8', marginBottom: '-2px' }}>Isabela Castro</h5>
+                                            <span style={{ fontSize: 12, color: '#8092A8', marginBottom: 5 }}>Há 3 min atrás</span>
+                                        </FeedPostUser>
+                                        <FeedPostOptions src={postOptions} />
+                                    </FeedPostHeader>
+                                    <FeedpostContent>
+                                        <h5 style={{ marginTop: 40, fontFamily: 'Roboto', fontSize: 15.5, color: '#8092A8', fontWeight: 400 }}>Lorem Ipsum is simply dummy text of the printing and typesetting!</h5>
+                                        <img alt="post" style={{ width: '100%', height: '100%', borderRadius: '30px', marginTop: -10 }} src={post} />
+                                    </FeedpostContent>
+                                    <FeedPostAcions>
+                                        <img width="20" style={{ marginLeft: 10, cursor: 'pointer' }} src={like} />
+                                        <img style={{ marginLeft: 20, cursor: 'pointer' }} width="20" src={comment} />
+                                        <img style={{ marginLeft: 20, cursor: 'pointer' }} width="20" src={share} />
+                                    </FeedPostAcions>
+                                </FeedPostsContainer>
+                            </FeedPosts>
+                        </Feed>
+                        <Friends>
+                            <Friendstitle>AMIGOS</Friendstitle>
+                            <FriendsCard>
+                                <FriendUserPic src={friend1} />
+                                <FriendInfo>
+                                    <h5 style={{ marginTop: 25, fontSize: 14, color: '#8092A8' }}>Daniela Matos</h5>
+                                    <OnlineFriends>
+                                        <img width="15" src={online} />
+                                        <h6 style={{fontSize: 13, color: '#3FFF1D', fontFamily: 'Roboto', letterSpacing: .5, marginLeft: 3}}>Online</h6>
+                                    </OnlineFriends>
+                                </FriendInfo>
+                                <FriendOptions>
+                                    <img style={{cursor: 'pointer'}} width={16} src={friendMail} />
+                                    <img style={{cursor: 'pointer'}} width={16} src={friend} />
+                                </FriendOptions>
+                            </FriendsCard>
+                            <FriendsCard style={{marginTop: 30}}>
+                                <FriendUserPic src={friend2} />
+                                <FriendInfo>
+                                    <h5 style={{ marginTop: 25, fontSize: 14, color: '#8092A8' }}>Daniela Matos</h5>
+                                    <OnlineFriends>
+                                        <img width="15" src={online} />
+                                        <h6 style={{fontSize: 13, color: '#3FFF1D', fontFamily: 'Roboto', letterSpacing: .5, marginLeft: 3}}>Online</h6>
+                                    </OnlineFriends>
+                                </FriendInfo>
+                                <FriendOptions>
+                                    <img style={{cursor: 'pointer'}} width={16} src={friendMail} />
+                                    <img style={{cursor: 'pointer'}} width={16} src={friend} />
+                                </FriendOptions>
+                            </FriendsCard>
+                            <FriendsCard style={{marginTop: 30}}>
+                                <FriendUserPic src={friend3} />
+                                <FriendInfo>
+                                    <h5 style={{ marginTop: 25, fontSize: 14, color: '#8092A8' }}>Daniela Matos</h5>
+                                    <OnlineFriends>
+                                        <img width="15" src={online} />
+                                        <h6 style={{fontSize: 13, color: '#3FFF1D', fontFamily: 'Roboto', letterSpacing: .5, marginLeft: 3}}>Online</h6>
+                                    </OnlineFriends>
+                                </FriendInfo>
+                                <FriendOptions>
+                                    <img style={{cursor: 'pointer'}} width={16} src={friendMail} />
+                                    <img style={{cursor: 'pointer'}} width={16} src={friend} />
+                                </FriendOptions>
+                            </FriendsCard>
+                            <FriendsCard style={{marginTop: 30}}>
+                                <FriendUserPic src={friend4} />
+                                <FriendInfo>
+                                    <h5 style={{ marginTop: 25, fontSize: 14, color: '#8092A8' }}>Daniela Matos</h5>
+                                    <OnlineFriends>
+                                        <img width="15" src={online} />
+                                        <h6 style={{fontSize: 13, color: '#3FFF1D', fontFamily: 'Roboto', letterSpacing: .5, marginLeft: 3}}>Online</h6>
+                                    </OnlineFriends>
+                                </FriendInfo>
+                                <FriendOptions>
+                                    <img style={{cursor: 'pointer'}} width={16} src={friendMail} />
+                                    <img style={{cursor: 'pointer'}} width={16} src={friend} />
+                                </FriendOptions>
+                            </FriendsCard>
+                        </Friends>
+                    </FeedContainer>
                 </Container>
                 <ChatsContainer>
                     <ChatsTitle>ULTIMAS CONVERSAS</ChatsTitle>
@@ -236,56 +312,56 @@ export default function Home(){
                                 <CardHeader>
                                     <CardHeaderUser src={user5} />
                                     <CardHeaderUserInfo>
-                                        <h5 style={{marginTop: 5, fontSize: 14, color: '#8092A8'}}>Thais Fernandes</h5>
-                                        <span style={{marginTop: -20, fontSize: 12, marginBottom: 5, color: '#8092A8'}}>Há 12 min atrás</span>
+                                        <h5 style={{ marginTop: 5, fontSize: 14, color: '#8092A8' }}>Thais Fernandes</h5>
+                                        <span style={{ marginTop: -20, fontSize: 12, marginBottom: 5, color: '#8092A8' }}>Há 12 min atrás</span>
                                     </CardHeaderUserInfo>
                                     <img alt="messenger" width="35" height="35" src={messenger} />
                                 </CardHeader>
                                 <CardContent>
-                                    <p style={{color: '#8092A8', fontSize: 12}}>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
+                                    <p style={{ color: '#8092A8', fontSize: 12 }}>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
                                 </CardContent>
                             </ChatsCardContainer>
                         </ChatsCard>
                         <ChatsCard>
                             <ChatsCardContainer>
                                 <CardHeader>
-                                        <CardHeaderUser src={user6} />
-                                        <CardHeaderUserInfo>
-                                            <h5 style={{marginTop: 5, fontSize: 14, color: '#8092A8'}}>Rafael Sousa</h5>
-                                            <span style={{marginTop: -20, fontSize: 12, marginBottom: 5, color: '#8092A8'}}>Há 33 min atrás</span>
-                                        </CardHeaderUserInfo>
-                                        <img alt="messenger"  width="35" height="35" src={messenger} />
+                                    <CardHeaderUser src={user6} />
+                                    <CardHeaderUserInfo>
+                                        <h5 style={{ marginTop: 5, fontSize: 14, color: '#8092A8' }}>Rafael Sousa</h5>
+                                        <span style={{ marginTop: -20, fontSize: 12, marginBottom: 5, color: '#8092A8' }}>Há 33 min atrás</span>
+                                    </CardHeaderUserInfo>
+                                    <img alt="messenger" width="35" height="35" src={messenger} />
                                 </CardHeader>
                                 <CardContent>
-                                    <p style={{color: '#8092A8', fontSize: 12}}>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
+                                    <p style={{ color: '#8092A8', fontSize: 12 }}>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
                                 </CardContent>
-                             </ChatsCardContainer>
+                            </ChatsCardContainer>
                         </ChatsCard>
                         <ChatsCard>
                             <ChatsCardContainer>
                                 <CardHeader>
                                     <CardHeaderUser src={user7} />
                                     <CardHeaderUserInfo>
-                                        <h5 style={{marginTop: 5, fontSize: 14, color: '#8092A8'}}>Amanda Bastos</h5>
-                                        <span style={{marginTop: -20, fontSize: 12, marginBottom: 5, color: '#8092A8'}}>Há 52 min atrás</span>
+                                        <h5 style={{ marginTop: 5, fontSize: 14, color: '#8092A8' }}>Amanda Bastos</h5>
+                                        <span style={{ marginTop: -20, fontSize: 12, marginBottom: 5, color: '#8092A8' }}>Há 52 min atrás</span>
                                     </CardHeaderUserInfo>
-                                    <img alt="messenger"  width="35" height="35" src={messenger} />
+                                    <img alt="messenger" width="35" height="35" src={messenger} />
                                 </CardHeader>
                                 <CardContent>
-                                    <p style={{color: '#8092A8', fontSize: 12}}>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
+                                    <p style={{ color: '#8092A8', fontSize: 12 }}>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
                                 </CardContent>
                             </ChatsCardContainer>
                         </ChatsCard>
                         <CardChart>
                             <ChatsCardContainer>
-                                <CardHeader style={{marginTop: -15, justifyContent: 'flex-start'}}>
-                                    <CardHeaderUser style={{marginLeft: 5}} src={robot} />
-                                    <CardHeaderUserInfo style={{marginLeft: 10}}>
-                                        <h5 style={{marginTop: 5, fontSize: 14, color: '#8092A8'}}>Robô assistente</h5>
-                                        <span style={{marginTop: -20, fontSize: 12, marginBottom: 5, color: '#8092A8'}}>Há 3 dias atrás</span>
+                                <CardHeader style={{ marginTop: -15, justifyContent: 'flex-start' }}>
+                                    <CardHeaderUser style={{ marginLeft: 5 }} src={robot} />
+                                    <CardHeaderUserInfo style={{ marginLeft: 10 }}>
+                                        <h5 style={{ marginTop: 5, fontSize: 14, color: '#8092A8' }}>Robô assistente</h5>
+                                        <span style={{ marginTop: -20, fontSize: 12, marginBottom: 5, color: '#8092A8' }}>Há 3 dias atrás</span>
                                     </CardHeaderUserInfo>
                                 </CardHeader>
-                                <CardContent style={{marginTop: 45}}>
+                                <CardContent style={{ marginTop: 45 }}>
                                     <ReactApexChart options={chartData.options} series={chartData.series} type="line" height={130} />
                                 </CardContent>
                             </ChatsCardContainer>
