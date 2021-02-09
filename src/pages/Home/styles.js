@@ -173,6 +173,8 @@ export const ChatsContent = styled.div`
     align-items: center;
     flex-direction: column;
     border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+
     margin-top: 30px;
     width: 100%;
     height: 100%;
@@ -185,7 +187,7 @@ export const ChatsCard = styled.div`
     margin-top: 25px;
     border-radius: 20px;
     width: 85%;
-    height: 130px;
+    height: 120px;
     background-color: #FFF;
     box-shadow: 0px 0px 0px rgba(209,209,207,0.2), 0 0px 10px rgba(193,193,191,0.3);
 `;
