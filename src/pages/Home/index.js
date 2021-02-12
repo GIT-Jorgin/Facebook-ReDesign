@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
     Body,
     Nav,
@@ -47,7 +47,18 @@ import {
     FriendInfo,
     FriendOptions,
     OnlineFriends,
-    Friendstitle
+    Friendstitle,
+    FacebookLogo,
+    NavConfig,
+    NavMenu,
+    FullScreenMenu,
+    FullScreenMenuContainer,
+    FullScreenMenuItem,
+    ChatsUserName,
+    GhostChats,
+    FeedPostIMG,
+    PostDescript,
+    StorieUserName,
 } from './styles';
 import home from '../../images/icons/home_icon.png';
 import play from '../../images/icons/play_icon.png';
@@ -104,8 +115,17 @@ import offline from '../../images/icons/offline.png';
 import friend from '../../images/icons/friend.png';
 import friendAdd from '../../images/icons/friendAdd.png';
 import friendMail from '../../images/icons/friendMail.png';
+import navMenu from '../../images/icons/menu.png';
 
 export default function Home() {
+    const [openMenu, setOpenMenu] = useState(false);
+
+
+    function openMenuF(){
+        setOpenMenu(true);
+        document.body.style.overflow = 'hidden';
+    }
+
     const [chartData] = [{
         series: [{
             name: "dado",
@@ -154,7 +174,7 @@ export default function Home() {
     return (
         <Body>
             <Nav>
-                <img alt="facebook logo" style={{ width: 35, height: 35, cursor: 'pointer' }} src={facebook_logo} />
+                <FacebookLogo alt="facebook logo" src={facebook_logo} />
                 <NavContainer>
                     <Navlink>
                         <img alt="home icon" style={{ width: '25px' }} src={home} />
@@ -179,7 +199,42 @@ export default function Home() {
                         <img alt="emoji icon" style={{ width: '25px' }} src={emoji} />
                     </Navlink>
                 </NavContainer>
-                <img alt="settings icon" style={{ width: 30, height: 30, cursor: 'pointer' }} src={settings} />
+                <NavConfig alt="Nav Config" src={settings} />
+                <NavMenu onClick={() => openMenuF()} src={navMenu} />
+                { openMenu &&
+                <FullScreenMenu>
+                    <FullScreenMenuContainer>
+                        <FullScreenMenuItem>
+                            <img alt="home icon" style={{ width: '30px' }} src={home} />
+                            <h4 style={{color: '#8092A8', fontSize: 24, fontFamily: 'Roboto', marginTop: '36px', marginLeft: 8}}>INICIO</h4>
+                        </FullScreenMenuItem>
+                        <FullScreenMenuItem>
+                            <img alt="play icon" style={{ width: '30px' }} src={play} />
+                            <h4 style={{color: '#8092A8', fontSize: 24, fontFamily: 'Roboto', marginTop: '36px', marginLeft: 8}}>VIDEOS</h4>
+                        </FullScreenMenuItem>
+                        <FullScreenMenuItem>
+                            <img alt="menu icon" style={{ width: '30px' }} src={menu} />
+                            <h4 style={{color: '#8092A8', fontSize: 24, fontFamily: 'Roboto', marginTop: '36px', marginLeft: 8}}>MENU</h4>
+                        </FullScreenMenuItem>
+                        <FullScreenMenuItem>
+                            <img alt="user icon" style={{ width: '30px' }} src={user} />
+                            <h4 style={{color: '#8092A8', fontSize: 24, fontFamily: 'Roboto', marginTop: '36px', marginLeft: 8}}>AMIGOS</h4>
+                        </FullScreenMenuItem>
+                        <FullScreenMenuItem>
+                            <img alt="trend icon" style={{ width: '30px' }} src={ray} />
+                            <h4 style={{color: '#8092A8', fontSize: 24, fontFamily: 'Roboto', marginTop: '36px', marginLeft: 8}}>TRENDS</h4>
+                        </FullScreenMenuItem>
+                        <FullScreenMenuItem>
+                            <img alt="emoji icon" style={{ width: '30px' }} src={emoji} />
+                            <h4 style={{color: '#8092A8', fontSize: 24, fontFamily: 'Roboto', marginTop: '36px', marginLeft: 8}}>PERSONALIZAR</h4>
+                        </FullScreenMenuItem>
+                        <FullScreenMenuItem>
+                            <img alt="emoji icon" style={{ width: '30px' }} src={settings} />
+                            <h4 style={{color: '#8092A8', fontSize: 24, fontFamily: 'Roboto', marginTop: '36px', marginLeft: 8}}>CONFIGURAÇÔES</h4>
+                        </FullScreenMenuItem>
+                    </FullScreenMenuContainer>
+                </FullScreenMenu>
+                }
             </Nav>
             <MainContainer>
                 <GhostNav></GhostNav>
@@ -197,19 +252,19 @@ export default function Home() {
                         <StoriesContainer>
                             <StorieCard image={stories1}>
                                 <StoreUser src={user1} />
-                                <h3 style={{ color: 'white', letterSpacing: '1.3px', textShadow: "0px 2px 4px #000000", fontWeight: '500', fontFamily: 'Roboto' }}>JULIANA</h3>
+                                <StorieUserName>JULIANA</StorieUserName>
                             </StorieCard>
                             <StorieCard image={stories2}>
                                 <StoreUser src={user2} />
-                                <h3 style={{ color: 'white', letterSpacing: '1.3px', textShadow: "0px 2px 4px #000000", fontWeight: '500', fontFamily: 'Roboto' }}>MAICON</h3>
+                                <StorieUserName>MAICON</StorieUserName>
                             </StorieCard>
                             <StorieCard image={stories3}>
                                 <StoreUser src={user3} />
-                                <h3 style={{ color: 'white', letterSpacing: '1.3px', textShadow: "0px 2px 4px #000000", fontWeight: '500', fontFamily: 'Roboto' }}>ANDRÉ</h3>
+                                <StorieUserName>ANDRÉ</StorieUserName>
                             </StorieCard>
                             <StorieCard image={stories4}>
                                 <StoreUser src={user4} />
-                                <h3 style={{ color: 'white', letterSpacing: '1.3px', textShadow: "0px 2px 4px #000000", fontWeight: '500', fontFamily: 'Roboto' }}>RENATA</h3>
+                                <StorieUserName>RENATA</StorieUserName>
                             </StorieCard>
                         </StoriesContainer>
                     </Stories>
@@ -240,8 +295,8 @@ export default function Home() {
                                         <FeedPostOptions src={postOptions} />
                                     </FeedPostHeader>
                                     <FeedpostContent>
-                                        <h5 style={{ marginTop: 40, fontFamily: 'Roboto', fontSize: 15.5, color: '#8092A8', fontWeight: 400 }}>Lorem Ipsum is simply dummy text of the printing and typesetting!</h5>
-                                        <img alt="post" style={{ width: '100%', height: '100%', borderRadius: '30px', marginTop: -10 }} src={post} />
+                                        <PostDescript>Lorem Ipsum is simply dummy text of the printing and typesetting!</PostDescript>
+                                        <FeedPostIMG src={post} />
                                     </FeedpostContent>
                                     <FeedPostAcions>
                                         <img width="20" style={{ marginLeft: 10, cursor: 'pointer' }} src={like} />
@@ -327,7 +382,7 @@ export default function Home() {
                             <FriendsCard style={{marginTop: 35}}>
                                 <FriendUserPic src={friend5} />
                                 <FriendInfo>
-                                    <h5 style={{ marginTop: 25, fontSize: 14, color: '#8092A8', fontFamily: 'Roboto' }}>lucas Alves</h5>
+                                    <h5 style={{ marginTop: 25, fontSize: 14, color: '#8092A8', fontFamily: 'Roboto' }}>Lucas Alves</h5>
                                     <OnlineFriends>
                                         <img width="15" src={offline} />
                                         <h6 style={{fontSize: 13, color: '#C70039', fontFamily: 'Roboto', letterSpacing: .5, marginLeft: 3}}>Offline</h6>
@@ -355,6 +410,7 @@ export default function Home() {
                         </Friends>
                     </FeedContainer>
                 </Container>
+                <GhostChats></GhostChats>
                 <ChatsContainer>
                     <ChatsTitle>ULTIMAS CONVERSAS</ChatsTitle>
                     <ChatsContent>
@@ -363,7 +419,7 @@ export default function Home() {
                                 <CardHeader>
                                     <CardHeaderUser src={user5} />
                                     <CardHeaderUserInfo>
-                                        <h5 style={{ marginTop: 5, fontSize: 14, color: '#8092A8' }}>Thais Fernandes</h5>
+                                        <ChatsUserName>Thais Fernandes</ChatsUserName>
                                         <span style={{ marginTop: -20, fontSize: 12, marginBottom: 5, color: '#8092A8' }}>Há 12 min atrás</span>
                                     </CardHeaderUserInfo>
                                     <img alt="messenger" width="35" height="35" src={messenger} />
@@ -378,7 +434,7 @@ export default function Home() {
                                 <CardHeader>
                                     <CardHeaderUser src={user6} />
                                     <CardHeaderUserInfo>
-                                        <h5 style={{ marginTop: 5, fontSize: 14, color: '#8092A8' }}>Rafael Sousa</h5>
+                                        <ChatsUserName>Rafael Sousa</ChatsUserName>
                                         <span style={{ marginTop: -20, fontSize: 12, marginBottom: 5, color: '#8092A8' }}>Há 33 min atrás</span>
                                     </CardHeaderUserInfo>
                                     <img alt="messenger" width="35" height="35" src={messenger} />
@@ -393,7 +449,7 @@ export default function Home() {
                                 <CardHeader>
                                     <CardHeaderUser src={user7} />
                                     <CardHeaderUserInfo>
-                                        <h5 style={{ marginTop: 5, fontSize: 14, color: '#8092A8' }}>Amanda Bastos</h5>
+                                        <ChatsUserName>Amanda Bastos</ChatsUserName>
                                         <span style={{ marginTop: -20, fontSize: 12, marginBottom: 5, color: '#8092A8' }}>Há 52 min atrás</span>
                                     </CardHeaderUserInfo>
                                     <img alt="messenger" width="35" height="35" src={messenger} />
@@ -408,7 +464,7 @@ export default function Home() {
                                 <CardHeader style={{ marginTop: -15, justifyContent: 'flex-start' }}>
                                     <CardHeaderUser style={{ marginLeft: 5 }} src={robot} />
                                     <CardHeaderUserInfo style={{ marginLeft: 10 }}>
-                                        <h5 style={{ marginTop: 5, fontSize: 14, color: '#8092A8' }}>Robô assistente</h5>
+                                        <ChatsUserName>Robô assistente</ChatsUserName>
                                         <span style={{ marginTop: -20, fontSize: 12, marginBottom: 5, color: '#8092A8' }}>Há 3 dias atrás</span>
                                     </CardHeaderUserInfo>
                                 </CardHeader>
@@ -422,7 +478,7 @@ export default function Home() {
                                 <CardHeader>
                                     <CardHeaderUser src={user8} />
                                     <CardHeaderUserInfo>
-                                        <h5 style={{ marginTop: 5, fontSize: 14, color: '#8092A8' }}>Gabriela Moreira</h5>
+                                        <ChatsUserName>Gabriela Moreira</ChatsUserName>
                                         <span style={{ marginTop: -20, fontSize: 12, marginBottom: 5, color: '#8092A8' }}>Há 1 Hora atrás</span>
                                     </CardHeaderUserInfo>
                                     <img alt="messenger" width="35" height="35" src={messenger} />
@@ -437,7 +493,7 @@ export default function Home() {
                                 <CardHeader>
                                     <CardHeaderUser src={user9} />
                                     <CardHeaderUserInfo>
-                                        <h5 style={{ marginTop: 5, fontSize: 14, color: '#8092A8' }}>Felipe Smith</h5>
+                                        <ChatsUserName>Felipe Smith</ChatsUserName>
                                         <span style={{ marginTop: -20, fontSize: 12, marginBottom: 5, color: '#8092A8' }}>Há 1 Hora atrás</span>
                                     </CardHeaderUserInfo>
                                     <img alt="messenger" width="35" height="35" src={messenger} />
@@ -452,7 +508,7 @@ export default function Home() {
                                 <CardHeader>
                                     <CardHeaderUser src={user10} />
                                     <CardHeaderUserInfo>
-                                        <h5 style={{ marginTop: 5, fontSize: 14, color: '#8092A8' }}>Vitoria Rodrigues</h5>
+                                        <ChatsUserName>Vitoria Rodrigues</ChatsUserName>
                                         <span style={{ marginTop: -20, fontSize: 12, marginBottom: 5, color: '#8092A8' }}>Há 1 Dia atrás</span>
                                     </CardHeaderUserInfo>
                                     <img alt="messenger" width="35" height="35" src={messenger} />

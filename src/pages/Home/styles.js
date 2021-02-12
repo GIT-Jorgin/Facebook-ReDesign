@@ -15,6 +15,75 @@ export const Nav = styled.div`
     height: 90px;
     justify-content: space-around;
     align-items: center;
+
+    @media (max-width: 620px){
+        justify-content: space-between;
+    }
+`;
+
+export const FacebookLogo = styled.img`
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+
+    @media (max-width: 620px){
+        margin-left: 20px;
+    }
+`;
+
+export const FullScreenMenu = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 110vh;
+    background-color: white;
+    overflow: hidden;
+    z-index: 10;
+`;
+
+export const FullScreenMenuContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 70%;
+`;
+
+export const FullScreenMenuItem = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 60px;
+`;
+
+export const NavConfig = styled.img`
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+
+    @media (max-width: 620px){
+        display: none;
+    }
+`;
+
+export const NavMenu = styled.img`
+    display: none;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    margin-right: 20px;
+    -webkit-tap-highlight-color: transparent;
+    @media (max-width: 620px){
+        display: inline;
+    }
 `;
 
 export const NavContainer = styled.div`
@@ -24,6 +93,10 @@ export const NavContainer = styled.div`
     justify-content: space-evenly;
     align-items: center;
     height: 100%;
+
+    @media (max-width: 620px){
+        display: none;
+    }
 `;
 
 export const Navlink = styled.div`
@@ -61,6 +134,10 @@ export const MainContainer = styled.div`
     width: 100%;
     height: 100%;
     justify-content: space-between;
+
+    @media (max-width: 854px){
+        justify-content: center
+    }
 `;
 
 export const Sidenav = styled.div`
@@ -72,6 +149,10 @@ export const Sidenav = styled.div`
     align-items: center;
     flex-direction: column;
     justify-content: center;
+
+    @media (max-width: 854px){
+        display: none;
+    }
 `;
 
 export const GhostNav = styled.div`
@@ -82,6 +163,10 @@ export const GhostNav = styled.div`
     align-items: center;
     flex-direction: column;
     justify-content: center;
+
+    @media (max-width: 854px){
+        display: none
+    }
 `;
 
 export const Sidemenu = styled.div`
@@ -99,6 +184,10 @@ export const Sidemenu = styled.div`
 export const Container = styled.div`
     width: 64%;
     height: 100%;
+
+    @media (max-width: 1051px){
+        width: 84%
+    }
 `;
 
 export const Stories = styled.div`
@@ -122,6 +211,26 @@ export const StoriesContainer = styled.div`
     margin-top: 50px;
     align-items: center;
     justify-content: space-between;
+
+    @media (max-width: 736px){
+        margin-top: 40px;
+    }
+
+    @media (max-width: 638px){
+        margin-top: 30px;
+    }
+
+    @media (max-width: 528px){
+        margin-top: 20px;
+    }
+
+    @media (max-width: 484px){
+        margin-top: 10px;
+    }
+
+    @media (max-width: 433px){
+        margin-top: -10px;
+    }
 `;
 
 export const StorieCard = styled.div`
@@ -143,6 +252,52 @@ export const StorieCard = styled.div`
     &:hover{
         box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
     }
+
+    @media (max-width: 1168px){
+        width: 160px;
+        height: 220px;
+    }
+
+    @media (max-width: 1051px){
+        width: 180px;
+        height: 240px;
+    }
+
+
+    @media (max-width: 995px){
+        width: 160px;
+        height: 220px;
+    }
+
+    @media (max-width: 854px){
+        width: 150px;
+        height: 210px;
+    }
+
+    @media (max-width: 736px){
+        width: 130px;
+        height: 190px;
+    }
+
+    @media (max-width: 638px){
+        width: 110px;
+        height: 170px;
+    }
+
+    @media (max-width: 528px){
+        width: 100px;
+        height: 160px;
+    }
+
+    @media (max-width: 482px){
+        width: 90px;
+        height: 150px;
+    }
+
+    @media (max-width: 432px){
+        width: 80px;
+        height: 140px;
+    }
 `;
 
 export const StoreUser = styled.img`
@@ -151,11 +306,60 @@ export const StoreUser = styled.img`
     margin-top: -30px;
     border-radius: 100px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+    @media (max-width: 736px){
+    width: 50px;
+    height: 50px;
+    margin-top: -25px;
+    }
+
+    @media (max-width: 432px){
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    }
+`;
+
+export const StorieUserName = styled.h3`
+    color: white;
+    font-size: 18px;
+    letter-spacing: 1.3px;
+    text-shadow: 0px 2px 4px #000000;
+    font-weight: 500;
+    font-family: 'Roboto';
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+
+    @media (max-width: 638px){
+        font-size: 16px;
+    }
+
+    @media (max-width: 528px){
+        font-size: 14px;
+    }
+
+    @media (max-width: 482px){
+        font-size: 12px;
+    }
+`;
+
+export const GhostChats = styled.div`
+    display: none;
+    width: 8%;
+    height: 100%;
+
+    @media (min-width: 855px) and (max-width: 1051px){
+        display: inline;
+    }
 `;
 
 export const ChatsContainer = styled.div`
     width: 22%;
     height: 100%;
+
+    @media (max-width: 1051px){
+        display: none
+    }
 `;
 
 export const ChatsTitle = styled.h4`
@@ -192,6 +396,16 @@ export const ChatsCard = styled.div`
     box-shadow: 0px 0px 0px rgba(209,209,207,0.2), 0 0px 10px rgba(193,193,191,0.3);
 `;
 
+export const ChatsUserName = styled.h5`
+    margin-top: 5px;
+    font-size: 14px;
+    color: #8092A8;
+
+    @media (max-width: 1128px){
+        font-size: 13px;
+    }
+`;
+
 export const ChatsCardContainer = styled.div`
     display: flex;
     flex-direction: column;
@@ -214,6 +428,11 @@ export const CardHeaderUser = styled.img`
     height: 46px;
     background-color: cyan;
     border-radius: 10px;
+
+    @media (max-width: 1128px){
+        width: 20%;
+        height: 42px;
+    }
 `;
 
 export const CardHeaderUserInfo = styled.div`
@@ -250,6 +469,10 @@ export const FeedContainer = styled.div`
     height: 100%;
     flex-direction: row;
     justify-content: space-between;
+
+    @media (max-width: 854px){
+        justify-content: center;
+    }
 `;
 
 export const Feed = styled.div`
@@ -258,6 +481,23 @@ export const Feed = styled.div`
     width: 65%;
     height: 100%;
     margin-top: 100px;
+
+    @media (max-width: 854px){
+        width: 100%;
+        align-items: center;
+    }
+
+    @media (max-width: 638px){
+        margin-top: 50px;
+    }
+
+    @media (max-width: 482px){
+        margin-top: 20px;
+    }
+
+    @media (max-width: 432px){
+        margin-top: 10px;
+    }
 `;
 
 export const Post = styled.div`
@@ -278,6 +518,26 @@ export const PostIcons = styled.div`
     justify-content: space-evenly;
     width: 55%;
     height: 50px;
+
+    @media (max-width: 745px){
+        justify-content: space-around;
+    }
+
+    @media (max-width: 627px){
+        width: 65%;
+    }
+
+    @media (max-width: 627px){
+        justify-content: space-between;
+    }
+
+    @media (max-width: 451px){
+        width: 75%;
+    }
+
+    @media (max-width: 385px){
+        width: 85%;
+    }
 `;
 
 export const PostInput = styled.textarea`
@@ -315,6 +575,7 @@ export const PostSubmit = styled.button`
     background-color: #F4F9FE;
     border-radius: 5px;
     margin-bottom: 15px;
+    -webkit-tap-highlight-color: transparent;
 
     &:focus{
         outline: none;
@@ -332,6 +593,11 @@ export const PostsTitle = styled.h4`
     color: #8092A8;
     font-size: 16px;
     letter-spacing: 1.5px;
+    margin-right: auto;
+
+    @media (max-width: 854px){
+        margin-left: 15px;
+    }
 `;
 
 export const FeedPosts = styled.div`
@@ -346,6 +612,30 @@ export const FeedPosts = styled.div`
     background-color: #FFF;
     margin-bottom: 30px;
     box-shadow: 0px 0px 0px rgba(209,209,207,0.2), 0 0px 10px rgba(193,193,191,0.3);
+
+    @media (max-width: 854px){
+        height: 570px;
+    }
+
+    @media (max-width: 784px){
+        height: 540px;
+    }
+
+    @media (max-width: 722px){
+        height: 510px;
+    }
+
+    @media (max-width: 668px){
+        height: 485px;
+    }
+
+    @media (max-width: 502px){
+        height: 435px;
+    }
+
+    @media (max-width: 426px){
+        height: 380px;
+    }
 `;
 
 export const FeedPostsContainer = styled.div`
@@ -373,6 +663,50 @@ export const FeedPostPic = styled.img`
 export const FeedPostUser = styled.div`
     width: 76%;
     height: 100%;
+
+    @media (max-width: 605px){
+        width: 70%;
+    }
+
+    @media (max-width: 475px){
+        width: 60%;
+    }
+
+    @media (max-width: 400px){
+        width: 57%;
+    }
+`;
+
+export const FeedPostIMG = styled.img`
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    margin-top: -10px;
+
+    @media (max-width: 558px){
+        height: 250px;
+    }
+
+    @media (max-width: 502px){
+        height: 210px;
+        border-radius: 20px;
+    }
+
+    @media (max-width: 426px){
+        height: 170px;
+    }
+`;
+
+export const PostDescript = styled.h5`
+    margin-top: 40px;
+    font-family: 'Roboto';
+    font-size: 15.5px;
+    color: #8092A8;
+    font-weight: 400;
+
+    @media (max-width: 502px){
+        margin-top: 30px;
+    }
 `;
 
 export const FeedPostOptions = styled.img`
@@ -409,6 +743,10 @@ export const Friends = styled.div`
     width: 35%;
     height: 100%;
     margin-top: 110px;
+
+    @media (max-width: 854px){
+        display: none
+    }
 `;
 
 export const Friendstitle = styled.h4`
