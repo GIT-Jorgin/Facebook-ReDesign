@@ -59,6 +59,9 @@ import {
     FeedPostIMG,
     PostDescript,
     StorieUserName,
+    FullScreenMenuHeader,
+    User2,
+    Footer,
 } from './styles';
 import home from '../../images/icons/home_icon.png';
 import play from '../../images/icons/play_icon.png';
@@ -116,14 +119,20 @@ import friend from '../../images/icons/friend.png';
 import friendAdd from '../../images/icons/friendAdd.png';
 import friendMail from '../../images/icons/friendMail.png';
 import navMenu from '../../images/icons/menu.png';
+import close from '../../images/icons/close.png';
 
 export default function Home() {
     const [openMenu, setOpenMenu] = useState(false);
 
 
     function openMenuF(){
-        setOpenMenu(true);
-        document.body.style.overflow = 'hidden';
+        if (!openMenu) {
+            setOpenMenu(true);
+            document.body.style.overflow = 'hidden';
+        }else{
+            setOpenMenu(false);
+            document.body.style.overflow = 'visible';
+        }
     }
 
     const [chartData] = [{
@@ -175,6 +184,9 @@ export default function Home() {
         <Body>
             <Nav>
                 <FacebookLogo alt="facebook logo" src={facebook_logo} />
+                <User2>
+                    <img alt="profile" style={{ width: 50, borderRadius: 10 }} src={profilePicture} />
+                </User2>
                 <NavContainer>
                     <Navlink>
                         <img alt="home icon" style={{ width: '25px' }} src={home} />
@@ -203,6 +215,9 @@ export default function Home() {
                 <NavMenu onClick={() => openMenuF()} src={navMenu} />
                 { openMenu &&
                 <FullScreenMenu>
+                    <FullScreenMenuHeader>
+                        <img width="50" onClick={() => openMenuF()} src={close} />
+                    </FullScreenMenuHeader>
                     <FullScreenMenuContainer>
                         <FullScreenMenuItem>
                             <img alt="home icon" style={{ width: '30px' }} src={home} />
@@ -521,6 +536,9 @@ export default function Home() {
                     </ChatsContent>
                 </ChatsContainer>
             </MainContainer>
+            <Footer>
+                <h4 style={{fontFamily: 'Roboto', color: '#8092A8', fontWeight: 400}}>© 2021 - Desenvolvido por <a style={{color: '#27C4FF', textDecoration: 'none'}} href="#">JORGIN</a></h4>
+            </Footer>
         </Body>
     )
 }

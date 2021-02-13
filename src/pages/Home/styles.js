@@ -46,13 +46,23 @@ export const FullScreenMenu = styled.div`
     z-index: 10;
 `;
 
+export const FullScreenMenuHeader = styled.div`
+    display: flex;
+    width: 90%;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-top: -40px;
+`;
+
 export const FullScreenMenuContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 70%;
+    height: 60%;
 `;
 
 export const FullScreenMenuItem = styled.div`
@@ -117,6 +127,23 @@ export const User = styled.div`
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+`;
+
+export const User2 = styled.div`
+    display: flex;
+    width: 55px;
+    height: 55px;
+    border-radius: 16px;
+    border: 2px solid #38B1FF;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+
+    @media (min-width: 620px){
+        display: none;
+    }
 `;
 
 export const NavActive = styled.div`
@@ -292,6 +319,7 @@ export const StorieCard = styled.div`
     @media (max-width: 482px){
         width: 90px;
         height: 150px;
+        border-radius: 14px;
     }
 
     @media (max-width: 432px){
@@ -800,4 +828,12 @@ export const OnlineFriends = styled.div`
     height: 100%;
     align-items: center;
     flex-direction: row;
+`;
+
+export const Footer = styled.div`
+    display: flex;
+    width: 100%;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
 `;
