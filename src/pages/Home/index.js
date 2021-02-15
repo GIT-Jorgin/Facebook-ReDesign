@@ -185,10 +185,10 @@ export default function Home() {
     return (
         <Body>
             <ResponsiveAlert>
-                <img width="60" src={responsiveAlert} />
+                <img alt="Alert" width="60" src={responsiveAlert} />
                 <h4 style={{textAlign: 'center', fontFamily: 'Roboto', color: '#C70039', width: '90%'}}>A APLICAÇÃO NÃO ESTÁ ADAPTADA PARA ESSA RESOLUÇÃO!</h4>
                 <h4 style={{textAlign: 'center', fontStyle: 'italic', fontWeight: 400, fontSize: 12, fontFamily: 'Roboto', color: '#8092A8', width: '90%'}}>TENTE USAR UM DISPOSITIVO COM PELO MENOS <strong>390 PIXELS</strong> DE LARGURA</h4>
-                <a style={{color: '#27C4FF', fontWeight: 'bold'}} href="#">JORGIN</a>
+                <a style={{color: '#27C4FF', fontWeight: 'bold'}} href="https://www.google.com.br/">JORGIN</a>
             </ResponsiveAlert>
             <Nav>
                 <FacebookLogo alt="facebook logo" src={facebook_logo} />
@@ -224,7 +224,7 @@ export default function Home() {
                 { openMenu &&
                 <FullScreenMenu>
                     <FullScreenMenuHeader>
-                        <img width="50" onClick={() => openMenuF()} src={close} />
+                        <img alt="#" width="50" onClick={() => openMenuF()} src={close} />
                     </FullScreenMenuHeader>
                     <FullScreenMenuContainer>
                         <FullScreenMenuItem>
@@ -322,9 +322,9 @@ export default function Home() {
                                         <FeedPostIMG src={post} />
                                     </FeedpostContent>
                                     <FeedPostAcions>
-                                        <img width="20" style={{ marginLeft: 10, cursor: 'pointer' }} src={like} />
-                                        <img style={{ marginLeft: 20, cursor: 'pointer' }} width="20" src={comment} />
-                                        <img style={{ marginLeft: 20, cursor: 'pointer' }} width="20" src={share} />
+                                        <img alt="#" width="20" style={{ marginLeft: 10, cursor: 'pointer' }} src={like} />
+                                        <img alt="#" style={{ marginLeft: 20, cursor: 'pointer' }} width="20" src={comment} />
+                                        <img alt="#" style={{ marginLeft: 20, cursor: 'pointer' }} width="20" src={share} />
                                     </FeedPostAcions>
                                 </FeedPostsContainer>
                             </FeedPosts>
@@ -332,102 +332,102 @@ export default function Home() {
                         <Friends>
                             <Friendstitle>AMIGOS</Friendstitle>
                             <FriendsCard>
-                                <FriendUserPic src={friend1} />
+                                <FriendUserPic alt="#" src={friend1} />
                                 <FriendInfo>
                                     <h5 style={{ marginTop: 25, fontSize: 14, color: '#8092A8', fontFamily: 'Roboto' }}>Daniela Matos</h5>
                                     <OnlineFriends>
-                                        <img width="15" src={online} />
+                                        <img alt="#" width="15" src={online} />
                                         <h6 style={{fontSize: 13, color: '#3FFF1D', fontFamily: 'Roboto', letterSpacing: .5, marginLeft: 3}}>Online</h6>
                                     </OnlineFriends>
                                 </FriendInfo>
                                 <FriendOptions>
-                                    <img style={{cursor: 'pointer'}} width={16} src={friendMail} />
-                                    <img style={{cursor: 'pointer'}} width={16} src={friend} />
+                                    <img alt="#" style={{cursor: 'pointer'}} width={16} src={friendMail} />
+                                    <img alt="#" style={{cursor: 'pointer'}} width={16} src={friend} />
                                 </FriendOptions>
                             </FriendsCard>
                             <FriendsCard style={{marginTop: 30}}>
-                                <FriendUserPic src={friend2} />
+                                <FriendUserPic alt="#" src={friend2} />
                                 <FriendInfo>
                                     <h5 style={{ marginTop: 25, fontSize: 14, color: '#8092A8', fontFamily: 'Roboto' }}>Rodrigo Dias</h5>
                                     <OnlineFriends>
-                                        <img width="15" src={online} />
+                                        <img alt="#" width="15" src={online} />
                                         <h6 style={{fontSize: 13, color: '#3FFF1D', fontFamily: 'Roboto', letterSpacing: .5, marginLeft: 3}}>Online</h6>
                                     </OnlineFriends>
                                 </FriendInfo>
                                 <FriendOptions>
-                                    <img style={{cursor: 'pointer'}} width={16} src={friendMail} />
-                                    <img style={{cursor: 'pointer'}} width={16} src={friend} />
+                                    <img alt="#" style={{cursor: 'pointer'}} width={16} src={friendMail} />
+                                    <img alt="#" style={{cursor: 'pointer'}} width={16} src={friend} />
                                 </FriendOptions>
                             </FriendsCard>
                             <FriendsCard style={{marginTop: 30}}>
-                                <FriendUserPic src={friend3} />
+                                <FriendUserPic alt="#" src={friend3} />
                                 <FriendInfo>
                                     <h5 style={{ marginTop: 25, fontSize: 14, color: '#8092A8', fontFamily: 'Roboto' }}>Evelyn Oliveira</h5>
                                     <OnlineFriends>
-                                        <img width="15" src={online} />
+                                        <img alt="#" width="15" src={online} />
                                         <h6 style={{fontSize: 13, color: '#3FFF1D', fontFamily: 'Roboto', letterSpacing: .5, marginLeft: 3}}>Online</h6>
                                     </OnlineFriends>
                                 </FriendInfo>
                                 <FriendOptions>
-                                    <img style={{cursor: 'pointer'}} width={16} src={friendMail} />
-                                    <img style={{cursor: 'pointer'}} width={16} src={friend} />
+                                    <img alt="#" style={{cursor: 'pointer'}} width={16} src={friendMail} />
+                                    <img alt="#" style={{cursor: 'pointer'}} width={16} src={friend} />
                                 </FriendOptions>
                             </FriendsCard>
                             <FriendsCard style={{marginTop: 30}}>
-                                <FriendUserPic src={friend4} />
+                                <FriendUserPic alt="#" src={friend4} />
                                 <FriendInfo>
                                     <h5 style={{ marginTop: 25, fontSize: 14, color: '#8092A8', fontFamily: 'Roboto' }}>Thiago Ferreira</h5>
                                     <OnlineFriends>
-                                        <img width="15" src={offline} />
+                                        <img alt="#" width="15" src={offline} />
                                         <h6 style={{fontSize: 13, color: '#C70039', fontFamily: 'Roboto', letterSpacing: .5, marginLeft: 3}}>Offline</h6>
                                     </OnlineFriends>
                                 </FriendInfo>
                                 <FriendOptions>
-                                    <img style={{cursor: 'pointer'}} width={16} src={friendMail} />
-                                    <img style={{cursor: 'pointer'}} width={16} src={friend} />
+                                    <img alt="#" style={{cursor: 'pointer'}} width={16} src={friendMail} />
+                                    <img alt="#" style={{cursor: 'pointer'}} width={16} src={friend} />
                                 </FriendOptions>
                             </FriendsCard>
                             <Friendstitle style={{marginTop: 50}}>SUGESTÕES DE AMIZADE</Friendstitle>
                             <FriendsCard>
-                                <FriendUserPic src={friend6} />
+                                <FriendUserPic alt="#" src={friend6} />
                                 <FriendInfo>
                                     <h5 style={{ marginTop: 25, fontSize: 14, color: '#8092A8', fontFamily: 'Roboto' }}>Ana Clara</h5>
                                     <OnlineFriends>
-                                        <img width="15" src={online} />
+                                        <img alt="#" width="15" src={online} />
                                         <h6 style={{fontSize: 13, color: '#3FFF1D', fontFamily: 'Roboto', letterSpacing: .5, marginLeft: 3}}>Online</h6>
                                     </OnlineFriends>
                                 </FriendInfo>
                                 <FriendOptions>
-                                    <img style={{cursor: 'pointer'}} width={16} src={friendMail} />
-                                    <img style={{cursor: 'pointer'}} width={16} src={friendAdd} />
+                                    <img alt="#" style={{cursor: 'pointer'}} width={16} src={friendMail} />
+                                    <img alt="#" style={{cursor: 'pointer'}} width={16} src={friendAdd} />
                                 </FriendOptions>
                             </FriendsCard>
                             <FriendsCard style={{marginTop: 35}}>
-                                <FriendUserPic src={friend5} />
+                                <FriendUserPic alt="#" src={friend5} />
                                 <FriendInfo>
                                     <h5 style={{ marginTop: 25, fontSize: 14, color: '#8092A8', fontFamily: 'Roboto' }}>Lucas Alves</h5>
                                     <OnlineFriends>
-                                        <img width="15" src={offline} />
+                                        <img alt="#" width="15" src={offline} />
                                         <h6 style={{fontSize: 13, color: '#C70039', fontFamily: 'Roboto', letterSpacing: .5, marginLeft: 3}}>Offline</h6>
                                     </OnlineFriends>
                                 </FriendInfo>
                                 <FriendOptions>
-                                    <img style={{cursor: 'pointer'}} width={16} src={friendMail} />
-                                    <img style={{cursor: 'pointer'}} width={16} src={friendAdd} />
+                                    <img alt="#" style={{cursor: 'pointer'}} width={16} src={friendMail} />
+                                    <img alt="#" style={{cursor: 'pointer'}} width={16} src={friendAdd} />
                                 </FriendOptions>
                             </FriendsCard>
                             <FriendsCard style={{marginTop: 35}}>
-                                <FriendUserPic src={friend7} />
+                                <FriendUserPic alt="#" src={friend7} />
                                 <FriendInfo>
                                     <h5 style={{ marginTop: 25, fontSize: 14, color: '#8092A8', fontFamily: 'Roboto' }}>Maria Eduarda</h5>
                                     <OnlineFriends>
-                                        <img width="15" src={online} />
+                                        <img alt="#" width="15" src={online} />
                                         <h6 style={{fontSize: 13, color: '#3FFF1D', fontFamily: 'Roboto', letterSpacing: .5, marginLeft: 3}}>Online</h6>
                                     </OnlineFriends>
                                 </FriendInfo>
                                 <FriendOptions>
-                                    <img style={{cursor: 'pointer'}} width={16} src={friendMail} />
-                                    <img style={{cursor: 'pointer'}} width={16} src={friendAdd} />
+                                    <img alt="#" style={{cursor: 'pointer'}} width={16} src={friendMail} />
+                                    <img alt="#" style={{cursor: 'pointer'}} width={16} src={friendAdd} />
                                 </FriendOptions>
                             </FriendsCard>
                         </Friends>
@@ -440,7 +440,7 @@ export default function Home() {
                         <ChatsCard>
                             <ChatsCardContainer>
                                 <CardHeader>
-                                    <CardHeaderUser src={user5} />
+                                    <CardHeaderUser alt="#" src={user5} />
                                     <CardHeaderUserInfo>
                                         <ChatsUserName>Thais Fernandes</ChatsUserName>
                                         <span style={{ marginTop: -20, fontSize: 12, marginBottom: 5, color: '#8092A8' }}>Há 12 min atrás</span>
@@ -455,7 +455,7 @@ export default function Home() {
                         <ChatsCard>
                             <ChatsCardContainer>
                                 <CardHeader>
-                                    <CardHeaderUser src={user6} />
+                                    <CardHeaderUser alt="#" src={user6} />
                                     <CardHeaderUserInfo>
                                         <ChatsUserName>Rafael Sousa</ChatsUserName>
                                         <span style={{ marginTop: -20, fontSize: 12, marginBottom: 5, color: '#8092A8' }}>Há 33 min atrás</span>
@@ -470,7 +470,7 @@ export default function Home() {
                         <ChatsCard>
                             <ChatsCardContainer>
                                 <CardHeader>
-                                    <CardHeaderUser src={user7} />
+                                    <CardHeaderUser alt="#" src={user7} />
                                     <CardHeaderUserInfo>
                                         <ChatsUserName>Amanda Bastos</ChatsUserName>
                                         <span style={{ marginTop: -20, fontSize: 12, marginBottom: 5, color: '#8092A8' }}>Há 52 min atrás</span>
@@ -485,7 +485,7 @@ export default function Home() {
                         <CardChart>
                             <ChatsCardContainer>
                                 <CardHeader style={{ marginTop: -15, justifyContent: 'flex-start' }}>
-                                    <CardHeaderUser style={{ marginLeft: 5 }} src={robot} />
+                                    <CardHeaderUser alt="#" style={{ marginLeft: 5 }} src={robot} />
                                     <CardHeaderUserInfo style={{ marginLeft: 10 }}>
                                         <ChatsUserName>Robô assistente</ChatsUserName>
                                         <span style={{ marginTop: -20, fontSize: 12, marginBottom: 5, color: '#8092A8' }}>Há 3 dias atrás</span>
@@ -499,7 +499,7 @@ export default function Home() {
                         <ChatsCard>
                             <ChatsCardContainer>
                                 <CardHeader>
-                                    <CardHeaderUser src={user8} />
+                                    <CardHeaderUser alt="#" src={user8} />
                                     <CardHeaderUserInfo>
                                         <ChatsUserName>Gabriela Moreira</ChatsUserName>
                                         <span style={{ marginTop: -20, fontSize: 12, marginBottom: 5, color: '#8092A8' }}>Há 1 Hora atrás</span>
@@ -514,7 +514,7 @@ export default function Home() {
                         <ChatsCard>
                             <ChatsCardContainer>
                                 <CardHeader>
-                                    <CardHeaderUser src={user9} />
+                                    <CardHeaderUser alt="#" src={user9} />
                                     <CardHeaderUserInfo>
                                         <ChatsUserName>Felipe Smith</ChatsUserName>
                                         <span style={{ marginTop: -20, fontSize: 12, marginBottom: 5, color: '#8092A8' }}>Há 1 Hora atrás</span>
@@ -529,7 +529,7 @@ export default function Home() {
                         <ChatsCard style={{marginBottom: 25}}>
                             <ChatsCardContainer>
                                 <CardHeader>
-                                    <CardHeaderUser src={user10} />
+                                    <CardHeaderUser alt="#" src={user10} />
                                     <CardHeaderUserInfo>
                                         <ChatsUserName>Vitoria Rodrigues</ChatsUserName>
                                         <span style={{ marginTop: -20, fontSize: 12, marginBottom: 5, color: '#8092A8' }}>Há 1 Dia atrás</span>
@@ -545,7 +545,7 @@ export default function Home() {
                 </ChatsContainer>
             </MainContainer>
             <Footer>
-                <h4 style={{fontFamily: 'Roboto', color: '#8092A8', fontWeight: 400}}>© 2021 - Desenvolvido por <a style={{color: '#27C4FF', textDecoration: 'none'}} href="#">JORGIN</a></h4>
+                <h4 style={{fontFamily: 'Roboto', color: '#8092A8', fontWeight: 400}}>© 2021 - Desenvolvido por <a style={{color: '#27C4FF', textDecoration: 'none'}} target="_blank" href="https://www.google.com.br/">JORGIN</a></h4>
             </Footer>
         </Body>
     )
