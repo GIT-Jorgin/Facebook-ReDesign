@@ -19,6 +19,10 @@ export const Nav = styled.div`
     @media (max-width: 620px){
         justify-content: space-between;
     }
+
+    @media (max-width: 386px){
+        display: none;
+    }
 `;
 
 export const FacebookLogo = styled.img`
@@ -164,6 +168,10 @@ export const MainContainer = styled.div`
 
     @media (max-width: 854px){
         justify-content: center
+    }
+
+    @media (max-width: 386px){
+        display: none;
     }
 `;
 
@@ -836,4 +844,21 @@ export const Footer = styled.div`
     height: 80px;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: 386px){
+        display: none;
+    }
+`;
+
+export const ResponsiveAlert = styled.div`
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 386px){
+        display: flex;
+    }
 `;

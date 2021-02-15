@@ -62,6 +62,7 @@ import {
     FullScreenMenuHeader,
     User2,
     Footer,
+    ResponsiveAlert,
 } from './styles';
 import home from '../../images/icons/home_icon.png';
 import play from '../../images/icons/play_icon.png';
@@ -120,6 +121,7 @@ import friendAdd from '../../images/icons/friendAdd.png';
 import friendMail from '../../images/icons/friendMail.png';
 import navMenu from '../../images/icons/menu.png';
 import close from '../../images/icons/close.png';
+import responsiveAlert from '../../images/icons/responsiveAlert.png';
 
 export default function Home() {
     const [openMenu, setOpenMenu] = useState(false);
@@ -182,6 +184,12 @@ export default function Home() {
 
     return (
         <Body>
+            <ResponsiveAlert>
+                <img width="60" src={responsiveAlert} />
+                <h4 style={{textAlign: 'center', fontFamily: 'Roboto', color: '#C70039', width: '90%'}}>A APLICAÇÃO NÃO ESTÁ ADAPTADA PARA ESSA RESOLUÇÃO!</h4>
+                <h4 style={{textAlign: 'center', fontStyle: 'italic', fontWeight: 400, fontSize: 12, fontFamily: 'Roboto', color: '#8092A8', width: '90%'}}>TENTE USAR UM DISPOSITIVO COM PELO MENOS <strong>390 PIXELS</strong> DE LARGURA</h4>
+                <a style={{color: '#27C4FF', fontWeight: 'bold'}} href="#">JORGIN</a>
+            </ResponsiveAlert>
             <Nav>
                 <FacebookLogo alt="facebook logo" src={facebook_logo} />
                 <User2>
