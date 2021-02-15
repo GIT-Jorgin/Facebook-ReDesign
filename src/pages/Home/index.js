@@ -545,7 +545,7 @@ export default function Home() {
                 </ChatsContainer>
             </MainContainer>
             <Footer>
-                <h4 style={{fontFamily: 'Roboto', color: '#8092A8', fontWeight: 400}}>© 2021 - Desenvolvido por <a style={{color: '#27C4FF', textDecoration: 'none'}} target="_blank" href="https://www.google.com.br/">JORGIN</a></h4>
+                <h4 style={{fontFamily: 'Roboto', color: '#8092A8', fontWeight: 400}}>© 2021 - Desenvolvido por <a style={{color: '#27C4FF', textDecoration: 'none'}} target="_blank" rel="noreferrer" href="https://www.google.com.br/">JORGIN</a></h4>
             </Footer>
         </Body>
     )
