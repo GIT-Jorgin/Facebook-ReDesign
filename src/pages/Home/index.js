@@ -188,7 +188,7 @@ export default function Home() {
                 <img alt="Alert" width="60" src={responsiveAlert} />
                 <h4 style={{textAlign: 'center', fontFamily: 'Roboto', color: '#C70039', width: '90%'}}>A APLICAÇÃO NÃO ESTÁ ADAPTADA PARA ESSA RESOLUÇÃO!</h4>
                 <h4 style={{textAlign: 'center', fontStyle: 'italic', fontWeight: 400, fontSize: 12, fontFamily: 'Roboto', color: '#8092A8', width: '90%'}}>TENTE USAR UM DISPOSITIVO COM PELO MENOS <strong>390 PIXELS</strong> DE LARGURA</h4>
-                <a style={{color: '#27C4FF', fontWeight: 'bold'}} href="https://www.google.com.br/">JORGIN</a>
+                <a style={{color: '#27C4FF', fontWeight: 'bold'}} href="https://bit.ly/3cQRUoV">JORGIN</a>
             </ResponsiveAlert>
             <Nav>
                 <FacebookLogo alt="facebook logo" src={facebook_logo} />
@@ -545,7 +545,7 @@ export default function Home() {
                 </ChatsContainer>
             </MainContainer>
             <Footer>
-                <h4 style={{fontFamily: 'Roboto', color: '#8092A8', fontWeight: 400}}>© 2021 - Desenvolvido por <a style={{color: '#27C4FF', textDecoration: 'none'}} target="_blank" rel="noreferrer" href="https://www.google.com.br/">JORGIN</a></h4>
+                <h4 style={{fontFamily: 'Roboto', color: '#8092A8', fontWeight: 400}}>© 2021 - Desenvolvido por <a style={{color: '#27C4FF', textDecoration: 'none'}} target="_blank" rel="noreferrer" href="https://bit.ly/3cQRUoV">JORGIN</a></h4>
             </Footer>
         </Body>
     )
